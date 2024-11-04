@@ -1,0 +1,61 @@
+# Importing necessary libraries
+import matplotlib.pyplot as plt
+
+# Data for 10 projects
+projects = [
+    'CURATOR-681',
+    'CURATOR-254',
+    'APEXCORE-453',
+    'COLLECTIONS-812',
+    'CAMEL-9136',
+    'ZOOKEEPER-86',
+    'CXF-6583',
+    'WAGON-527',
+    'SPARK-10680',
+    'TEZ-1088'
+]
+
+# First failure times (Zero to Five Shot)
+failure_runs = [
+    [0, 19, 0, 11, 8, 6],   # CURATOR-681
+    [0, 18, 0, 13, 11, 6],  # CURATOR-254
+    [1, 2, 1, 1, 1, 1],     # APEXCORE-453
+    [0, 17, 13, 7, 5, 3],   # COLLECTIONS-812
+    [0, 0, 0, 5, 4, 2],     # CAMEL-9136
+    [0, 0, 11, 7, 3, 4],    # ZOOKEEPER-86
+    [0, 9, 9, 7, 0, 5],     # CXF-6583
+    [0, 0, 13, 6, 5, 2],    # WAGON-527
+    [0, 10, 9, 9, 7, 6],    # SPARK-10680
+    [0, 5, 0, 0, 0, 0]      # TEZ-1088
+]
+
+# Assuming each run takes 10 seconds for the calculation
+time_per_run = 10  # seconds
+
+# Calculate total time until first failure
+total_failure_times = [[runs * time_per_run for runs in project_runs] for project_runs in failure_runs]
+
+# X-axis labels for shot types
+shots = ['Zero-Shot', 'One-Shot', 'Two-Shot', 'Three-Shot', 'Four-Shot', 'Five-Shot']
+
+# Plotting the results for each project
+plt.figure(figsize=(10, 5))
+for i, project in enumerate(projects):
+    plt.plot(shots, total_failure_times[i], marker='o', linestyle='-', label=project)
+
+# Adding titles and labels
+plt.title('Total Time Until First Failure for Multiple Problems')
+plt.xlabel('Shot Type')
+plt.ylabel('Total Time Until First Failure (seconds)')
+
+# Setting custom y-ticks
+plt.yticks(range(0, 201, 25))  # From 0 to 100 with a step of 25
+plt.ylim(0, 200)  # Setting y-axis limit
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Adding legend
+plt.legend(title='Projects', bbox_to_anchor=(1.05, 1), loc='upper left')
+
+# Show the plot
+plt.tight_layout()
+plt.show()

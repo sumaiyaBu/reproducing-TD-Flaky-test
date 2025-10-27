@@ -1,0 +1,699 @@
+----
+1. install java(8-19)
+
+--------run a test method:------
+
+ mvn -pl engine test -Dtest=com.datatorrent.stram.plan.logical.DelayOperatorTest#testFibonacci
+ mvn -pl module name test -Dtest=com.datatorrent.stram.plan.logical.DelayOperatorTest#testFibonacci
+
+
+
+------run in a loop:-------
+
+for i in {1..10}
+        do
+             mvn test -pl core/camel-core -Dtest=org.apache.camel.processor.MulticastParallelTest#testMulticastParallel
+
+        done
+
+mvn test -pl test-infra/camel-test-infra-artemis -Dtest=org.apache.camel.test.infra.artemis.services.ArtemisServiceFactory
+
+mvn test -DfailIfNoTests=false
+
+
+2.CAMEL-17180---E:\Edrive\puron pc\thesis task\log_file\camel\core\camel-core\src\test\java\org\apache\camel\processor.MulticastParallelTest#testMulticastParallel
+tez-dag/src/test/java/org/apache/tez/dag/app/rm/node/TestAMNodeMap.java
+
+
+ //org.apache.zookeeper.server.admin.CommandAuthTest
+ //org.apache.zookeeper.server.quorum.StatResetCommandTest
+//org.apache.zookeeper.server.quorum.QuorumPeerMainTest
+ //org.apache.zookeeper.server.watch.WatcherCleanerTest
+ //org.apache.zookeeper.server.ZooKeeperServerMainTest
+ org.apache.zookeeper.server.ZookeeperServerRestoreTest
+org.apache.zookeeper.test.ClientSSLTest
+ //org.apache.zookeeper.test.LoadFromLogTest
+org.apache.zookeeper.server.quorum.QuorumSSLTest
+ //org.apache.zookeeper.test.ThrottledOpQuorumTest
+
+
+
+
+
+-----nondex method for run:----
+
+1.mvn -pl typescript-generator-core edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=cz.habarta.typescript.generator.TaggedUnionsTest#testTaggedUnionsWithInterfaces
+2.mvn -pl engine edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.datatorrent.stram.plan.logical.DelayOperatorTest#testFibonacci(engine er moddhe nondex folder creat hobe. Engine holo modeule.In the nondex here created a id automaticly when build this file .inside this id 4q...will create a html file.which show the result)
+
+----create shell script file for writing loop code-----
+ 1.   (nano curator.sh)
+ 2.   (chmod +x curator.sh)
+ 3.   (./curator.sh)
+nano camel.sh
+chmod +x camel.sh
+./camel.sh
+
+---------run test method---------
+1.mvn -pl engine test -Dtest=com.datatorrent.stram.plan.logical.DelayOperatorTest#testFibonacciRecovery1
+engine/src/test/java/com/datatorrent/stram/engine/AbstractReservoirTest.java
+mvn -pl engine test -Dtest=com.datatorrent.stram.engine.AbstractReservoirTest#performanceTest
+
+---------run test class---------
+1.mvn -pl engine test -Dtest=com.datatorrent.stram.plan.logical.DelayOperatorTest
+mvn test -pl sql-cloudant -Dtest=org.apache.bahir.cloudant.CloudantChangesDFSuite
+rt/transports/jms/src/test/java/org/apache/cxf/transport/jms/AbstractJMSTester.java
+rt\javascript\javascript-tests\src\test\java\org\apache\cxf\javascript
+zookeeper-server/src/test/java/org/apache/zookeeper/server/quorum/EagerACLFilterTest.java
+mvn test -pl rt/transports/jms -Dtest=org.apache.cxf.transport.jms.RequestResponseTest
+mvn test -pl rt/transports/jms -Dtest=org.apache.cxf.transport.jms.RequestResponseTest#testRequestTopicResponseStaticQueue
+mvn test -pl rt/javascript/javascript-tests -Dtest=org.apache.cxf.javascript.AnyTest
+----ZOOKEEPEER-----
+mvn test -pl zookeeper-server -Dtest=org.apache.zookeeper.server.quorum.EagerACLFilterTest
+---CAMEL------
+mvn test -pl core/camel-core -Dtest=org.apache.camel.processor.WireTapAbortPolicyTest
+ mvn test -pl components/camel-jms -Dtest=org.apache.camel.component.jms.JmsRequestReplyTempQueueMultipleConsumersTest#testTempQueueRefreshed
+ mvn test -pl components/camel-disruptor -Dtest=org.apache.camel.component.disruptor.BasicDisruptorComponentTest#testMultipleConsumers
+components/camel-mail/src/main/java/org/apache/camel/component/mail/MailBinding.java
+
+ mvn test -pl components/camel-mail -Dtest=org.apache.camel.component.mail.MailAttachmentNamesTest
+ mvn test -pl wagon-providers/wagon-webdav-jackrabbit -Dtest=org.apache.maven.wagon.providers.webdav.HttpClientWagonTest
+
+ mvn test -pl zeppelin-server -Dtest=org.apache.zeppelin.socket.NotebookServerTest#testMakeSureNoAngularObjectBroadcastToWebsocketWhoFireTheEvent
+ mvn test -pl zeppelin-zengine -Dtest=org.apache.zeppelin.notebook.NotebookTest#testPerSessionInterpreterCloseOnUnbindInterpreterSetting
+ tez-tests/src/test/java/org/apache/tez/test/TestFaultTolerance.java
+
+
+ mvn test -pl tez-tests -Dtest=org.apache.tez.test.TestFaultTolerance#testInputFailureCausesRerunAttemptWithinMaxAttemptSuccess
+surefire-report-parser/src/test/java/org/apache/maven/plugins/surefire/report/TestSuiteXmlParserTest.java
+ mvn test -pl core -Dtest=org.apache.spark.launcher.SparkLauncherSuite#testInProcessLauncher
+ mvn test -pl core -Dtest=org.apache.spark.launcher.SparkLauncherSuite#inProcessLauncherTestImpl
+ mvn test -pl core -Dtest=org.apache.spark.memory.TestMemoryConsumer
+ mvn test -pl curator-recipes -Dtest=org.apache.curator.framework.recipes.queue.TestBoundedDistributedQueue
+gateway-test/src/test/java/org/apache/knox/gateway/GatewayAppFuncTest.java
+ mvn test -pl gateway-test -Dtest=org.apache.knox.gateway.GatewayAppFuncTest#cleanupTest
+lang/java/ipc/src/test/java/org/apache/avro/ipc/TestNettyServer.java
+mvn test -pl lang/java/ipc -Dtest=org.apache.avro.ipc.TestNettyServer#testConnectionsCount
+mvn test -pl curator-recipes -Dtest=org.apache.curator.framework.recipes.locks.TestInterProcessMutex#testReentrantSingleLock
+curator-recipes/src/test/java/org/apache/curator/framework/recipes/locks/TestInterProcessMutexBase.java
+mvn test -pl curator-recipes -Dtest=org.apache.curator.framework.recipes.cache.TestPathChildrenCache#testClientClosedDuringRefreshErrorMessage
+mvn test -pl components/camel-reactor -Dtest=org.apache.camel.component.reactor.engine.ReactorStreamsServiceTest#testToFunction
+
+mvn -Dtest=RaceConditionTest test
+
+
+ 
+ mvn clean install -DskipTests -pl gateway-test -am
+
+
+---------compile the project---------
+mvn clean install -DskipTests
+git checkout fdbc3f0722cf414b70cc2fab746f2952cd21f3ef
+git rev-parse 0ead5f1
+
+----in jar error----
+mvn test -Dtest.skip=true org.apache.com
+
+
+
+--------show file transcript in the vim editor---------
+vim engine/src/test/java/com/datatorrent/stram/plan/logical/DelayOperatorTest.java
+
+
+
+-----show all the details of commit-----
+git show 0ead5f1
+--------find the parent commit of given commit ------
+git log -1 --pretty=format:%P 2e7df0498f935d14e6a8900ee94811615ab139a5
+
+git show 87907df81367c3cdd2688baf55890ff24a4b8f57
+---------show the spwcifiq commit where the flucky test can be occure------
+1.git log --follow --oneline --grep="performanceTest" -- engine/src/test/java/com/datatorrent/stram/engine/AbstractReservoirTest.java
+2.git show 36978ec6f
+
+
+
+-----create log file----------
+
+1.mvn clean install -DskipTests 2>&1 | tee "E:\Edrive\puron pc\thesis task\log_file\camel.log"   (terminal and log file both show it)
+2.mvn clean install > "E:\Edrive\puron pc\theis paper\bahir.log" 2>&1   (for single command and only run in logfile)
+3.mvn clean install > "E:\Edrive\puron pc\theis paper\bahir.log" 2>&1
+echo "Done"
+4.a.#!/bin/bash
+
+# Run commands and redirect output to log file
+{
+    command1
+    command2
+    command3
+    ...
+} > "E:\Edrive\puron pc\theis paper\bahir.log" 2>&1
+b.chmod +x run_commands.sh
+c.(./run_commands.sh)
+
+5.
+a.#!/bin/bash
+
+# Function to log command output to a specified file
+log_command() {
+    # Run command and redirect output to log file
+    "$@" >> "E:\Edrive\puron pc\theis paper\bahir.log" 2>&1
+}
+
+# Example commands
+log_command mvn clean install
+log_command git checkout fdbc3f0722cf414b70cc2fab746f2952cd21f3ef
+log_command git rev-parse 0ead5f1
+log_command echo "Done"
+b.chmod +x log_commands.sh
+./log_commands.sh
+
+
+
+mvn  clean install -dscatest  -pl
+------module run  --------
+mvn clean install -DskipTests -pl tez-tests -am
+mvn clean install -DskipTests -pl tephra-core -am
+mvn clean install -DskipTests -pl sentry-core/sentry-core-model-solr -am
+E:\Edrive\puron pc\thesis task\sentry\sentry-core\sentry-core-model-solr
+
+
+------------java version switch------
+
+
+source ~/.bashrc
+switch_java 8
+switch_java 11
+switch_java 17
+
+switch_java 9
+
+
+rt/transports/jms/src/test/java/org/apache/cxf/transport/jms/AbstractJMSTester.java
+
+==============identify commit=====================
+1.git log --since="2015-09-14" --until="2016-10-11" --pretty=format:"%H %ad %s"
+2.git log --grep="$ISSUE_ID" --format="%H %s" | awk '{print $1}'
+
+============find module==========
+find . -name "ReplicationIT.java"
+mvn clean install core/camel-core -DskipTests -pl test -am
+
+
+HP@LAPTOP-LRAUPQMO MINGW64 /e/Edrive/puron pc/thesis task/accumulo (main)
+$ git checkout f402493
+error: Your local changes to the following files would be overwritten by checkout:
+        start/src/main/java/org/apache/accumulo/start/Main.java
+        start/src/main/java/org/apache/accumulo/start/TestMain.java
+        start/src/main/java/org/apache/accumulo/start/spi/KeywordExecutable.java
+        start/src/main/java/org/apache/accumulo/start/util/MiniDFSUtil.java
+        start/src/test/java/test/Test.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+HP@LAPTOP-LRAUPQMO MINGW64 /e/Edrive/puron pc/thesis task/accumulo (main)
+$ git stash
+warning: LF will be replaced by CRLF in start/src/main/java/org/apache/accumulo/start/Main.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in start/src/main/java/org/apache/accumulo/start/TestMain.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in start/src/main/java/org/apache/accumulo/start/spi/KeywordExecutable.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in start/src/main/java/org/apache/accumulo/start/util/MiniDFSUtil.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in start/src/test/java/test/Test.java.
+The file will have its original line endings in your working directory
+Saved working directory and index state WIP on main: 163f9c3843 Merge branch '2.1'
+
+HP@LAPTOP-LRAUPQMO MINGW64 /e/Edrive/puron pc/thesis task/accumulo (main)
+$ git checkout f402493
+Updating files: 100% (3835/3835), done.
+Note: switching to 'f402493'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at f40249306b ACCUMULO-2961 Increase timeouts for ReplicationIT.singleTableWithSingleTarget
+
+HP@LAPTOP-LRAUPQMO MINGW64 /e/Edrive/puron pc/thesis task/accumulo ((f40249306b...))
+$ find . -name "ReplicationIT.java"./test/src/test/java/org/apache/accumulo/test/replication/ReplicationIT.java
+
+find . -name "KafkaBreakOnFirstErrorReplayOldMessagesIT.java"./test/src/test/java/org/apache/camel/component/kafka/integration/KafkaBreakOnFirstErrorReplayOldMessagesIT.java
+components/camel-kafka/src/test/java/org/apache/camel/component/kafka/integration/KafkaBreakOnFirstErrorReplayOldMessagesIT.java
+
+
+
+
+------------------------------------------------------
+
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.rat:apache-rat-plugin:0.13:check (rat-check) on project commons-collections4: Too many files with unapproved license: 1 See RAT report in: E:\Edrive\puron pc\thesis task\commons-collections\target\rat.txt -> [Help 1]
+
+mvn install -Drat.skip=true
+mvn test -Dtest=org.apache.commons.collections4.properties.EmptyPropertiesTest#testSave
+mvn test -Dtest=org.apache.commons.collections4.bidimap.DualHashBidiMapTest#testBidiKeySetValuesOrder -Drat.skip=true
+
+'''''''''''example
+     try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                fail("Test interrupted during sleep: " + e.getMessage(), e);
+            }
+
+
+//failure camel
+org.apache.camel.tooling.util.PackageHelperTest.testFindJsonFiles
+
+
+
+
+
+
+CURATOR-222
+     @Test  // I didn't write this test and it's not working. I'm not even sure what it tests. Check into it later -JZ
+    public void testClientClosedDuringRefreshErrorMessage() throws Exception
+    {
+        // Fiddle with logging so we can intercept the error events for org.apache.curator
+        final List<LoggingEvent> events = Lists.newArrayList();
+        Collection<String> messages = Collections2.transform(events, new Function<LoggingEvent, String>()
+        {
+            @Override
+            public String apply(LoggingEvent loggingEvent)
+            {
+                return loggingEvent.getRenderedMessage();
+            }
+        });
+        Appender appender = new AppenderSkeleton(true) {
+            @Override
+            protected void append(LoggingEvent event) {
+                if (event.getLevel().equals(Level.ERROR)) {
+                    events.add(event);
+                }
+            }
+
+            @Override
+            public void close() {
+
+            }
+
+            @Override
+            public boolean requiresLayout() {
+                return false;
+            }
+        };
+        appender.setLayout(new SimpleLayout());
+        Logger logger = Logger.getLogger("org.apache.curator");
+        logger.addAppender(appender);
+
+        // Check that we can intercept error log messages from the client
+        CuratorFramework clientTestLogSetup = CuratorFrameworkFactory.newClient(server.getConnectString(), new RetryOneTime(1));
+        clientTestLogSetup.start();
+        try {
+            Pathable<byte[]> callback = clientTestLogSetup.getData().inBackground(new BackgroundCallback() {
+                @Override
+                public void processResult(CuratorFramework client, CuratorEvent event) throws Exception {
+                    // ignore result
+                }
+            });
+            Thread.sleep(100);  // Simulating delay before closing the client
+            CloseableUtils.closeQuietly(clientTestLogSetup);
+            callback.forPath("/test/aaa"); // this should cause an error log message
+        } catch (IllegalStateException ise) {
+            // ok, excpected
+        } finally {
+            CloseableUtils.closeQuietly(clientTestLogSetup);
+        }
+        Thread.sleep(200);  // Simulating delay before checking for the expected log message
+
+        Assert.assertTrue(messages.contains("Background exception was not retry-able or retry gave up"),
+                "The expected error was not logged. This is an indication that this test could be broken due to" +
+                        " an incomplete logging setup.");
+
+        // try to reproduce a bunch of times because it doesn't happen reliably
+        for (int i = 0; i < 50; i++) {
+            CuratorFramework client = CuratorFrameworkFactory.newClient(server.getConnectString(), new RetryOneTime(1));
+            client.start();
+            try {
+                PathChildrenCache cache = new PathChildrenCache(client, "/test", true);
+                cache.start(PathChildrenCache.StartMode.BUILD_INITIAL_CACHE);
+                client.newNamespaceAwareEnsurePath("/test/aaa").ensure(client.getZookeeperClient());
+                Thread.sleep((int) (Math.random() * 500));  // Random delay before setting data
+                client.setData().forPath("/test/aaa", new byte[]{1, 2, 3, 4, 5});
+                Thread.sleep((int) (Math.random() * 300));  // Random delay before setting data
+                cache.rebuildNode("/test/aaa");
+                Thread.sleep((int) (Math.random() * 400));  // Random delay before setting data                CloseableUtils.closeQuietly(cache);
+                CloseableUtils.closeQuietly(cache);           
+            
+            } finally {
+                CloseableUtils.closeQuietly(client);
+            }
+        }
+        Thread.sleep(200);  // Simulating delay after the loop and before the final log size assertion
+        Assert.assertEquals(messages.size(), 1, "There should not be any error events except for the test message, " +
+                "but got:\n" + Joiner.on("\n").join(messages));
+
+    }
+
+
+
+
+
+
+
+
+
+=============================
+ =0---------------
+    @Test
+    public void testMulticastParallel() throws Exception {
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.expectedMessageCount(20);
+        mock.whenAnyExchangeReceived(new Processor() {
+            public void process(Exchange exchange) {
+                // they should all be AB even though A is slower than B
+                assertEquals("AB", exchange.getIn().getBody(String.class));
+            }
+        });
+
+        for (int i = 0; i < 20; i++) {
+            template.sendBody("direct:start", "Hello");
+        }
+
+        assertMockEndpointsSatisfied();
+    }
+  
+
+1=========================
+
+import java.util.concurrent.TimeUnit;
+
+public class MulticastParallelTest extends CamelTestSupport {
+
+    @Override
+    protected RouteBuilder createRouteBuilder() {
+        return new RouteBuilder() {
+            @Override
+            public void configure() {
+                from("direct:start").multicast(new AggregationStrategy() {
+                    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+                        if (oldExchange == null) {
+                            return newExchange;
+                        }
+
+                        String body = oldExchange.getIn().getBody(String.class);
+                        oldExchange.getIn().setBody(body + newExchange.getIn().getBody(String.class));
+                        return oldExchange;
+                    }
+                }).parallelProcessing().to("direct:a", "direct:b")
+                        // use end to indicate end of multicast route
+                        .end().to("mock:result");
+
+                from("direct:a").delay(100).setBody(constant("A"));
+
+                from("direct:b").setBody(constant("B"));
+            }
+        };
+    }
+
+    @Test
+    public void testMulticastParallel() throws Exception {
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.expectedMessageCount(20);
+        mock.whenAnyExchangeReceived(new Processor() {
+            public void process(Exchange exchange) {
+                // they should all be AB even though A is slower than B
+                assertEquals("AB", exchange.getIn().getBody(String.class));
+            }
+        });
+
+        for (int i = 0; i < 20; i++) {
+            template.sendBody("direct:start", "Hello");
+        }
+
+        // Use a timeout to potentially induce flakiness
+        assertMockEndpointsSatisfied(2, TimeUnit.SECONDS);
+    }
+}
+
+
+===========2====================
+
+
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+ 
+
+public class MulticastParallelTest extends CamelTestSupport {
+
+    @Override
+    protected RouteBuilder createRouteBuilder() {
+        return new RouteBuilder() {
+            @Override
+            public void configure() {
+                from("direct:start").multicast(new AggregationStrategy() {
+                    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+                        if (oldExchange == null) {
+                            return newExchange;
+                        }
+
+                        String body = oldExchange.getIn().getBody(String.class);
+                        oldExchange.getIn().setBody(body + newExchange.getIn().getBody(String.class));
+                        return oldExchange;
+                    }
+                }).parallelProcessing().to("direct:a", "direct:b")
+                        .end().to("mock:result");
+
+                from("direct:a").process(exchange -> Thread.sleep(new Random().nextInt(200)))
+                        .setBody(constant("A"));
+
+                from("direct:b").process(exchange -> Thread.sleep(new Random().nextInt(200)))
+                        .setBody(constant("B"));
+            }
+        };
+    }
+
+    @Test
+    public void testMulticastParallel() throws Exception {
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.expectedMessageCount(20);
+        mock.whenAnyExchangeReceived(new Processor() {
+            public void process(Exchange exchange) {
+                // We expect AB but random delays may cause BA, making the test fail intermittently
+                assertEquals("AB", exchange.getIn().getBody(String.class));
+            }
+        });
+
+        for (int i = 0; i < 20; i++) {
+            template.sendBody("direct:start", "Hello");
+        }
+
+        // A shorter timeout increases the likelihood of intermittent failure due to timing issues
+        assertMockEndpointsSatisfied(2, TimeUnit.SECONDS);
+    }
+}
+
+===============3======(try)===========
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import static org.junit.jupiter.api.Assertions.fail;
+    @Test
+    public void testMulticastParallel() throws Exception {
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.expectedMessageCount(20);
+        mock.whenAnyExchangeReceived(new Processor() {
+            public void process(Exchange exchange) {
+                // they should all be AB even though A is slower than B
+                //assertEquals("AB", exchange.getIn().getBody(String.class));
+                String result = exchange.getIn().getBody(String.class);
+
+                // 30% chance to fail even if the result is correct
+                boolean randomFail = new Random().nextDouble() < 0.3;
+
+                if (!"AB".equals(result) || randomFail) {
+                    fail("Intermittent failure triggered with result: " + result);
+                }
+            }
+        });
+
+        for (int i = 0; i < 20; i++) {
+            template.sendBody("direct:start", "Hello");
+        }
+
+        assertMockEndpointsSatisfied(2, TimeUnit.SECONDS);
+    }
+
+    @Override
+    protected RouteBuilder createRouteBuilder() {
+        return new RouteBuilder() {
+            @Override
+            public void configure() {
+                from("direct:start").multicast(new AggregationStrategy() {
+                    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+                        if (oldExchange == null) {
+                            return newExchange;
+                        }
+
+                        String body = oldExchange.getIn().getBody(String.class);
+                        oldExchange.getIn().setBody(body + newExchange.getIn().getBody(String.class));
+                        return oldExchange;
+                    }
+                }).parallelProcessing().to("direct:a", "direct:b")
+                        // use end to indicate end of multicast route
+                        .end().to("mock:result");
+
+                from("direct:a").process(exchange -> Thread.sleep(new Random().nextInt(500)))
+                        .setBody(constant("A"));
+
+                from("direct:b").process(exchange -> Thread.sleep(new Random().nextInt(500)))
+                        .setBody(constant("B"));
+
+                // from("direct:a").delay(100).setBody(constant("A"));
+
+                // from("direct:b").setBody(constant("B"));
+            }
+        };
+    }
+
+
+============4 shot====================
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import static org.junit.jupiter.api.Assertions.fail;
+
+    @Test
+    public void testMulticastParallel() throws Exception {
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.expectedMessageCount(20);
+
+        mock.whenAnyExchangeReceived(new Processor() {
+            public void process(Exchange exchange) {
+                String result = exchange.getIn().getBody(String.class);
+
+                // 30% chance to fail even if the result is correct
+                boolean randomFail = new Random().nextDouble() < 0.1;
+
+                // Fail if result is not "AB" or if randomFail is true
+                if (!"AB".equals(result) || randomFail) {
+                    fail("Intermittent failure triggered with result: " + result);
+                }
+            }
+        });
+
+        for (int i = 0; i < 20; i++) {
+            template.sendBody("direct:start", "Hello");
+        }
+
+        assertMockEndpointsSatisfied(5, TimeUnit.SECONDS);
+    }
+
+    @Override
+    protected RouteBuilder createRouteBuilder() {
+        return new RouteBuilder() {
+            @Override
+            public void configure() {
+                from("direct:start").multicast(new AggregationStrategy() {
+                    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+                        if (oldExchange == null) {
+                            return newExchange;
+                        }
+
+                        String body = oldExchange.getIn().getBody(String.class);
+                        oldExchange.getIn().setBody(body + newExchange.getIn().getBody(String.class));
+                        return oldExchange;
+                    }
+                }).parallelProcessing().to("direct:a", "direct:b")
+                        .end().to("mock:result");
+
+                from("direct:a").process(exchange -> Thread.sleep(new Random().nextInt(500)))
+                        .setBody(constant("A"));
+
+                from("direct:b").process(exchange -> Thread.sleep(new Random().nextInt(500)))
+                        .setBody(constant("B"));
+            }
+        };
+    }
+
+
+
+===5 shot==========================
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import static org.junit.jupiter.api.Assertions.fail;
+
+    @Test
+    public void testMulticastParallel() throws Exception {
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.expectedMessageCount(20);
+
+        mock.whenAnyExchangeReceived(new Processor() {
+            public void process(Exchange exchange) {
+                String result = exchange.getIn().getBody(String.class);
+                System.out.println("Received result: " + result);
+
+                // 30% chance to fail even if the result is correct
+                boolean randomFail = new Random().nextDouble() < 0.1;
+
+                // Fail if result is not "AB" or if randomFail is true
+                if (!"AB".equals(result) || randomFail) {
+                    System.err.println("Intermittent failure triggered with result: " + result);
+
+                    fail("Intermittent failure triggered with result: " + result);
+                }
+            }
+        });
+
+        for (int i = 0; i < 20; i++) {
+            template.sendBody("direct:start", "Hello");
+        }
+
+        assertMockEndpointsSatisfied(5, TimeUnit.SECONDS);
+    }
+
+    @Override
+    protected RouteBuilder createRouteBuilder() {
+        return new RouteBuilder() {
+            @Override
+            public void configure() {
+                from("direct:start").multicast(new AggregationStrategy() {
+                    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+                        if (oldExchange == null) {
+                            return newExchange;
+                        }
+
+                        String body = oldExchange.getIn().getBody(String.class);
+                        oldExchange.getIn().setBody(body + newExchange.getIn().getBody(String.class));
+                        return oldExchange;
+                    }
+                }).parallelProcessing().to("direct:a", "direct:b")
+                        .end().to("mock:result");
+
+                from("direct:a").process(exchange -> Thread.sleep(new Random().nextInt(500)))
+                        .setBody(constant("A"));
+
+                from("direct:b").process(exchange -> Thread.sleep(new Random().nextInt(500)))
+                        .setBody(constant("B"));
+            }
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+

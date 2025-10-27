@@ -1,0 +1,54 @@
+#!/bin/bash
+
+file_name=$(basename "$0" .sh)
+
+# Extract ISSUE_ID and RESULTS_DIRECTORY from the file name
+ISSUE_ID=$(echo $file_name | awk -F'_' '{print $2}')
+RESULTS_DIRECTORY=$(echo $file_name | awk -F'_' '{print $3}')
+
+# Set CSV file path
+csv_file="test_results_${ISSUE_ID}_${RESULTS_DIRECTORY}.csv"
+echo "Iteration,File Name,Total Tests,Successes,Failures,Errors,Skipped,Total Time (seconds)" > "$csv_file"
+
+total_success_count=0
+total_failure_count=0
+
+# Loop for 200 iterations
+for ((i=1; i<=10; i++)); do
+   echo "Iteration Running $i / 200 : $(date)"
+   mvn -pl curator-recipes test -Dtest=org.apache.curator.framework.recipes.cache.TestPathChildrenCache#testClientClosedDuringRefreshErrorMessage | tee mvn-test-$i.log
+
+   # Find test result files and extract data
+   for g in $(egrep "^Running|^\[INFO\] Running " mvn-test-$i.log | rev | cut -d' ' -f1 | rev); do
+     f=$(find . -name "TEST-${g}.xml" -not -path "target/surefire-reports/junitreports/")
+
+     for xml_file in $f; do
+       # Using grep and sed to extract values directly from the XML file
+       total_tests=$(grep -oP '(?<=tests=")[0-9]+' "$xml_file")
+       total_failures=$(grep -oP '(?<=failures=")[0-9]+' "$xml_file")
+       total_errors=$(grep -oP '(?<=errors=")[0-9]+' "$xml_file")
+       total_skipped=$(grep -oP '(?<=skipped=")[0-9]+' "$xml_file")
+       total_time=$(grep -oP '(?<=time=")[0-9.]+(?=")' "$xml_file")
+
+       # Calculate total success and total failure for the iteration
+       total_success=$((total_tests - total_failures - total_errors - total_skipped))
+       total_failure=$((total_failures + total_errors))
+
+       # Update global counts
+       total_success_count=$((total_success_count + total_success))
+       total_failure_count=$((total_failure_count + total_failure))
+
+       echo "$i,$xml_file,$total_tests,$total_success,$total_failures,$total_errors,$total_skipped,$total_time" >> "$csv_file"
+     done
+   done
+
+   # Create directories and move log files for each iteration
+   mkdir -p "/d/19CSE015/CURATOR-681/${ISSUE_ID}/${RESULTS_DIRECTORY}/isolation/$i"
+   mv mvn-test-$i.log "/d/19CSE015/CURATOR-681/${ISSUE_ID}/${RESULTS_DIRECTORY}/isolation/$i"
+done
+
+# Move the CSV file to the main results directory
+mv $csv_file "/d/19CSE015/CURATOR-681/${ISSUE_ID}"
+echo "CSV file created \"$csv_file\" with test results."
+echo "Total Successes: $total_success_count"
+echo "Total Failures: $total_failure_count"
